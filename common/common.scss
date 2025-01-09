@@ -181,3 +181,8 @@ body:not(.primary-group-businessmember):not(.admin-user) .names__secondary {
     background: rgba(var(--primary-rgb), 0.055)!important;
   }
 }
+
+/******** Hide Author on Published Pages **********************/
+.published-page-author {
+    display:none!important;
+}
