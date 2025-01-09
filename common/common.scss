@@ -172,4 +172,12 @@ body:not(.primary-group-businessmember):not(.admin-user) .names__secondary {
     display: none;
 }
 
-//THIS EXPLAINS THIS CODE>>>> https://mineralrightsforum.com/t/september-18-stuff/33745
+//THIS EXPLAINS THIS ABOVE CODE>>>> https://mineralrightsforum.com/t/september-18-stuff/33745
+
+/****************** Change Topic Hover Color *******************/
+.topic-list-item,
+.latest-topic-list-item {
+  &:hover {
+    background: rgba(var(--primary-rgb), 0.055)!important;
+  }
+}
