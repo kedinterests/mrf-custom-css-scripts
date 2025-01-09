@@ -1,0 +1,175 @@
+/***********************Hide Activity Tab on Group Page (JP)*************************/
+.group .group-nav a[title="Activity"] {
+    display: none;
+}
+/*************************************/
+
+/**********************Hide allow PM from profile page (JP)**************************/
+div.control-group.private-messages {
+    display: none;
+}
+/***********************************/
+
+/*********** About Page ***************/
+
+div.about__stats + h3 {
+    display:none!important;
+}
+div.about__stats {
+    display:none!important;
+}
+
+
+/**********************************Hide Full Names from NON-STAFF**********************/
+/* Hide full name for non-staff users based on the first possible element */
+body:not(.staff) #main-outlet .details .primary .primary-textual .user-profile-names .full-name,
+body:not(.admin) div.name-line a > span.name {
+  display: none!important;
+}
+
+/* Hide full name for non-logged-in (anonymous) users based on the first structure */
+.anonymous #main-outlet .details .primary .primary-textual .user-profile-names .full-name,
+.anonymous span.name, ul.list[aria-label="results user"] span.name, .search-results .name, body:not(.staff).select-kit-collection .user-titles .name {
+  display: none!important;
+}
+/**************************************/
+
+/********************************Highlight pinned topic**********************************/
+tr[data-topic-id='75463'], tr[data-topic-id='75533'] {
+/*tr.pinned*/
+    background-color: #ccffcc!important;
+}
+/**************************************/
+
+/*******************  Former Theme Component (Misc MRF Tweaks) ****************************/
+// JP 2024-03-18 hide tags from sidebar
+
+[data-section-name=tags] {
+    background: blue;
+    display: none;
+}
+
+///// Style the core Discourse components //////
+.IGNOREd-header #site-logo {
+    max-height: 100px;
+}
+
+.IGNOREd-header {
+    height: 120px;
+}
+
+// Add underline to link within posts upon hovering
+.cooked a:hover {
+    text-decoration: underline;
+}
+
+
+// Add vertical spacing to the list of expandable details on the FAQ page
+.static-faq details {
+    //padding-bottom: 10px;
+    margin-bottom: 1px;
+    //padding: 1px;
+}
+
+
+.topic-list .main-link a.title, a.mineral-services-directory {
+    color: #2575AD!important;
+    font-weight: bold!important;
+}
+
+.topic-list .main-link a.title:hover, a.mineral-services-directory:hover {
+    color: #cd2626!important;
+}
+
+
+// Taylor additions ///
+
+// Remove padding
+.list-controls .container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+// Hide "Advertisement" Text
+div.google-dfp-ad-label {
+    display: none;
+}
+
+// Darken the category descriptions
+.category-description {
+   color: #646464 !important;
+}
+
+// Chris Malone  Additions //
+.d-header #site-logo {
+    height:3.2em;
+}
+
+/*****************************************************************/
+
+/*******************  Set Category Logo Max Height (JP) ****************************/
+//.category-logo {
+    //max-height: 75px;
+    //float: left;
+    //margin-top: 3px;
+    //margin-bottom: 3px;
+    //margin-right: 15px;
+//}
+
+.category-logo.aspect-image {
+    max-width: 200px;
+    --max-height: 75px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 15px;
+}
+/*****************************************************************/
+
+/*******************  Style Business Member Signature (TH) ****************************/
+.group-signature {
+    font-weight: bold;
+    a {
+        color: #3E7EE7 !important;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+/*****************************************************************/
+
+/*******************  New Topic PLUS Icon Color ****************************/
+
+button#create-topic.btn,
+button.groups-header-new, 
+#new-create-topic {
+    color: white!important;
+    background: var(--tertiary);
+}
+
+// Post Topic button on composer
+.topic .btn.btn-icon-text.btn-primary.create {
+    color: white!important;
+    background: var(--tertiary)!important;
+}
+#create-topic > svg {
+    fill:#fff!important;
+}
+/*****************************************************************/
+// Hides the About Field on Profile page (and removes edit access) for non-business members (this is an upsell)
+// This will also show the about field for admin users
+body:not(.primary-group-businessmember):not(.admin-user) .pref-bio {
+    display: none;
+}
+
+body:not(.primary-group-businessmember):not(.admin-user) .pref-website {
+    display: none;
+}
+
+body:not(.primary-group-businessmember):not(.admin-user) .pref-profile-bg {
+    display: none;
+}
+
+body:not(.primary-group-businessmember):not(.admin-user) .names__secondary {
+    display: none;
+}
+
+//THIS EXPLAINS THIS CODE>>>> https://mineralrightsforum.com/t/september-18-stuff/33745

@@ -1,0 +1,52 @@
+/********************************Adjusts Search Bar Width on Mobile**********************************/
+.search-menu {
+    width: 95%;
+    margin: 0 auto;
+}
+/************************************/
+
+/*******************  From Previous Theme Component (Misc MRF Tweaks) ****************************/
+// Increase site logo size a little
+.d-header #site-logo {
+    max-width: 10em;
+    max-height: 3.18em;
+}
+
+.d-header .title {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+div.directory-ad-desktop {
+    display:none;
+}
+
+
+// If the the phone has a small width, adjust the side of the logo area
+@media (max-width: 320px) {
+    .d-header .title {
+        max-width: 40%;
+    }
+}
+
+// Fix odd width issue for latest topics
+div#list-area table.topic-list tr.topic-list-item td {
+    width: 100%; 
+}
+
+.hidden-for-mobile {
+    display: inline-block !important;
+}
+
+.d-header .title {
+    overflow: initial;
+}
+
+// Make category titles longer on mobile to prevent unnecessary wrapping.
+.category-list.with-topics th.main-link span.category-name {
+   display: inline-block;
+   //width: 300px;
+   width: 190%;
+}
+
+/*****************************************************************/
