@@ -186,3 +186,9 @@ body:not(.primary-group-businessmember):not(.admin-user) .names__secondary {
 .published-page-author {
     display:none!important;
 }
+
+
+/************** Hide Click Badge in Post for Non-Admins *****************/
+body:not(.staff) .badge.badge-notification.clicks {
+    display: none;
+}
