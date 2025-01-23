@@ -192,3 +192,8 @@ body:not(.primary-group-businessmember):not(.admin-user) .names__secondary {
 body:not(.staff) .badge.badge-notification.clicks {
     display: none;
 }
+
+/**************** PM Glyph Color *******************/
+.private-message-glyph {
+    color:green!important;
+}
