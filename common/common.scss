@@ -197,10 +197,6 @@ body:not(.staff) .badge.badge-notification.clicks {
 .private-message-glyph, .d-icon-envelope {
     color:green!important;
 }
-.controls .compose-pm .svg-icon {
-    fill: #fff!important; /* Change to your desired color */
-}
-
-.controls .show-user-notes-btn .svg-icon {
+.controls .compose-pm .svg-icon, .new-private-message .d-icon-envelope {
     fill: #fff!important; /* Change to your desired color */
 }
