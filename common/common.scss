@@ -194,9 +194,6 @@ body:not(.staff) .badge.badge-notification.clicks {
 }
 
 /**************** PM Glyph Color *******************/
-.private-message-glyph, .d-icon-envelope {
+.private-message-glyph {
     color:green!important;
-}
-.controls .compose-pm .svg-icon, .new-private-message .d-icon-envelope {
-    fill: #fff!important; /* Change to your desired color */
 }
