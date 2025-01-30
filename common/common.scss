@@ -203,5 +203,8 @@ body:not(.staff) .badge.badge-notification.clicks {
 .composer-action-privateMessage .grippie {
   background-color: #28b332!important;
 }
-.composer-action-privateMessage .d-editor-preview-wrapper {
-    background: white!important;
+.private-message .d-editor-preview-wrapper {
+    /* Your styles here */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
