@@ -197,3 +197,9 @@ body:not(.staff) .badge.badge-notification.clicks {
 .private-message-glyph {
     color:green!important;
 }
+.composer-action-privateMessage {
+  background: #e4ffe6!important;
+}
+.composer-action-privateMessage .grippie {
+  border-top: solid #28b332 6px!important;
+}
