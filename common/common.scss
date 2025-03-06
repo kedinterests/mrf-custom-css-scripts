@@ -4,16 +4,6 @@ div.control-group.private-messages {
 }
 /***********************************/
 
-/*********** About Page ***************/
-
-div.about__stats + h3 {
-    display:none!important;
-}
-div.about__stats {
-    display:none!important;
-}
-
-
 /********************************Highlight pinned topic**********************************/
 tr[data-topic-id='75463'], tr[data-topic-id='75533'] {
 /*tr.pinned*/
@@ -22,21 +12,20 @@ tr[data-topic-id='75463'], tr[data-topic-id='75533'] {
 /**************************************/
 
 /*******************  Former Theme Component (Misc MRF Tweaks) ****************************/
-// JP 2024-03-18 hide tags from sidebar
 
-[data-section-name=tags] {
-    background: blue;
-    display: none;
-}
-
-///// Style the core Discourse components //////
-.IGNOREd-header #site-logo {
+///// Style the core Discourse header //////
+/*.IGNOREd-header #site-logo {
     max-height: 100px;
+}*/
+
+// Chris Malone  Additions //
+.d-header #site-logo {
+    height:3.2em;
 }
 
-.IGNOREd-header {
+/*.IGNOREd-header {
     height: 120px;
-}
+}*/
 
 // Add underline to link within posts upon hovering
 .cooked a:hover {
@@ -69,31 +58,16 @@ tr[data-topic-id='75463'], tr[data-topic-id='75533'] {
     padding-left: 0px;
     padding-right: 0px;
 }
-// Hide "Advertisement" Text
-div.google-dfp-ad-label {
-    display: none;
-}
 
 // Darken the category descriptions
 .category-description {
    color: #646464 !important;
 }
 
-// Chris Malone  Additions //
-.d-header #site-logo {
-    height:3.2em;
-}
 
 /*****************************************************************/
 
 /*******************  Set Category Logo Max Height (JP) ****************************/
-//.category-logo {
-    //max-height: 75px;
-    //float: left;
-    //margin-top: 3px;
-    //margin-bottom: 3px;
-    //margin-right: 15px;
-//}
 
 .category-logo.aspect-image {
     max-width: 200px;
@@ -116,7 +90,7 @@ div.google-dfp-ad-label {
 }
 /*****************************************************************/
 
-/*******************  New Topic PLUS Icon Color ****************************/
+/*******************  "New Topic" and "Post Topic" Button ****************************/
 
 button#create-topic.btn,
 button.groups-header-new, 
@@ -152,8 +126,6 @@ body:not(.primary-group-businessmember):not(.admin-user) .names__secondary {
     display: none;
 }
 
-//THIS EXPLAINS THIS ABOVE CODE>>>> https://mineralrightsforum.com/t/september-18-stuff/33745
-
 /****************** Change Topic Hover Color *******************/
 .topic-list-item,
 .latest-topic-list-item {
@@ -173,7 +145,7 @@ body:not(.staff) .badge.badge-notification.clicks {
     display: none;
 }
 
-/**************** PM Glyph Color *******************/
+/**************** PM Icon Color *******************/
 .private-message-glyph {
     color:green!important;
 }
