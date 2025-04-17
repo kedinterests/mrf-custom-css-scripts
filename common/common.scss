@@ -563,3 +563,226 @@ body:not(.staff) .badge.badge-notification.clicks {
 }
 
 /*****************************************************************/
+
+/*******************  PUBLISHED PAGES ****************************/
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+[data-theme-premium-directory-block-1] h3,[data-theme-premium-directory-block-1] p, [data-theme-directory-block] p {
+    margin:0px!important;
+}
+
+[data-theme-directory] h1 {
+    text-align:center!important;
+}
+.published-page-content-wrapper {
+    margin:0px!important;
+    padding:0px!important;
+}
+.published-page-header-wrapper {
+    margin: 0px !important;
+    display:none!important;
+}
+[data-theme-page-header] {
+    margin:20px auto;
+}
+[data-theme-page-header] img {
+    width:400px!important;
+    margin-left:20px!important;
+}
+.published-page-content-body {
+    width: max-content;
+}
+
+[data-banner-ad-placeholder] {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+[data-banner-ad-placeholder] img {
+    width: 100%!important;
+    height: auto;
+    max-width:728px!important;
+}
+
+.published-page-content-body .lightbox-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.published-page-content-body .lightbox img {
+    max-width: 100%;
+    height: auto;
+}
+
+[data-theme-directory] h2 {
+    margin-top: 25px !important;
+    text-align: center !important;
+}
+
+.mineral-services-directory {
+    color: #000;
+    font-weight: bold;
+}
+
+.mineral-services-directory:hover {
+    text-decoration: underline;
+}
+
+.footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.full-width-header {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.page-title {
+    text-align: center !important;
+}
+[data-theme-directory] [data-theme-directory-tables] h2 {
+    border-bottom:none!important;
+    display:block;
+    background-color:#808080!important;
+    padding:5px 0;
+    text-align:center!important;
+    width:100%!important;
+    margin-bottom: 20px!important;
+    margin-top:20px!important;
+    color:#fff!important;
+}
+[data-theme-directory-tables] {
+    width:75%!important;
+    margin-left:auto;
+    margin-right:auto;
+}
+.published-page-content-wrapper {
+    max-width: max-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+[data-theme-directory-blocks] {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 40px !important;
+    margin-bottom: 40px !important;
+    justify-content: flex-start !important;
+    max-width: 100% !important; /* Ensures the content doesn't exceed the page width */
+
+}
+[data-theme-directory-block] {
+    background-color:#fafafa;
+    border-radius: 6px;
+}
+[data-theme-directory-block], [data-theme-premium-directory-block-1] {
+    padding: 15px 20px !important;
+    margin: 25px 10px !important;
+    flex: 1 1 calc(33.33% - 70px) !important; /* Creates three columns */
+    max-width: calc(33.33% - 40px) !important; /* Controls the max width */
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100% !important;
+    min-width:300px!important;
+}
+
+[data-theme-premium-directory-block-1] {
+    background: rgba(255, 245, 205, 0.75);
+box-shadow: 2px 2px 3px #999;
+border-radius: 6px;
+}
+.published-page-content-body {
+        width:100%!important;
+}
+[data-theme-directory] {
+        width:100%!important;
+        padding:0 50px!important;
+        box-sizing: border-box;
+    }
+    
+.published-page-content-body img:nth-of-type(2) {
+    width: 250px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+[data-footer-text] {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* Navigation Menu Styles */
+[data-theme-navigation] {
+  background-color: #111;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin-bottom:30px!important;
+}
+
+[data-theme-navigation-links] {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+[data-theme-navigation-links] a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+[data-footer-link] {
+    text-align:center;
+    font-weight:bold;
+    border-top:solid 1px #808080;
+    padding-top:20px!important;
+    width: 100%!important;
+}
+[data-footer-link] a {
+    color:#808080;
+}
+[data-footer-link] a:hover {
+    text-decoration:underline;
+}
+[data-footer-text] {
+    text-align:center;
+    padding-bottom:30px;
+}
+[data-testimonials] {
+    text-align:center!important;
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+}
+[data-footer-seal] {
+    width:200px!important;
+    display:block!important;
+    margin-top:-50px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    text-align:center!important;
+}
+span {
+    font-weight:bold;
+}
+
+@media (max-width: 768px) {
+  [data-theme-navigation-links] a:nth-child(n+2) {
+    display: none; /* Hide all links except the first one (Home) */
+  }
+}
+/*****************************************************************/
