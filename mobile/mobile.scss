@@ -49,3 +49,97 @@ div#list-area table.topic-list tr.topic-list-item td {
 }
 
 /*****************************************************************/
+
+/*******************  Published Pages ****************************/
+body.topic-77513 .published-page-content-wrapper {
+    width: 100% !important;
+    padding: 0 !important;
+}
+body.topic-77513 .published-page-header-wrapper {
+    display: none; /* Hide the header */
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    [data-theme-directory-block], [data-theme-premium-directory-block-1] {
+        flex: 1 1 40% !important;
+        max-width: 40% !important;
+    }
+
+    .published-page-content-body {
+        width: 100% !important;
+    }
+
+    [data-theme-directory] {
+        width: 100% !important;
+        padding: 0 20px !important;
+    }
+}
+@media (max-width: 768px) {
+    [data-theme-directory-block], [data-theme-premium-directory-block-1] {
+        flex: 1 1 40% !important;
+        max-width: 40% !important;
+    }
+    .published-page-content-body {
+        width:100%!important;
+    }
+ 
+ [data-theme-directory] {
+        width:100%!important;
+        padding:0 20px!important;
+    }
+[data-testimonials] {
+    text-align:center!important;
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
+}
+}
+
+@media (max-width: 480px) {
+    [data-theme-directory] {
+        width:100%!important;
+        padding:0 20px !important;
+    }
+    [data-theme-directory-tables] {
+        border:none!important;
+        width:100%!important;
+    }
+
+    [data-theme-directory-block], [data-theme-premium-directory-block-1] {
+    margin:0px!important;
+    max-width:100%!important;
+    }
+    [data-theme-directory-blocks] {
+            justify-content:center!important;
+
+    }
+[data-theme-directory] [data-theme-directory-tables] {
+    padding-top: 0px!important;
+    margin-top:-25px!important;
+}
+[data-theme-directory] h2 {
+    font-size:1.3rem!important;
+    padding: 5px 0px!important;
+}
+[data-theme-page-header] {
+    text-align:center!important;
+}
+[data-banner-ad-placeholder] img {
+    width: 90%!important;
+    height: auto;
+    max-width:300px!important;
+}
+[data-theme-page-header] img {
+    width:300px!important;
+}
+[data-theme-directory] h1 {
+   font-size:1.5rem;
+}
+[data-testimonials] {
+    text-align:center!important;
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+}
+/*****************************************************************/
