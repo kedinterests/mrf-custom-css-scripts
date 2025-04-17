@@ -1,6 +1,6 @@
 /*******************  Hide Stats on About Page ****************************/
-.about__right-side h3:contains("Site activity"),
-div.about__activities {
+.about__right-side h3:nth-of-type(2),
+.about__activities {
   display: none !important;
 }
 /*****************************************************************/
