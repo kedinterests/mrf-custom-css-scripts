@@ -1,3 +1,10 @@
+/*******************  Hide Stats on About Page ****************************/
+.about__right-side h3:contains("Site activity"),
+.about__activities {
+  display: none !important;
+}
+/*****************************************************************/
+
 /**********************************Hide Full Names from NON-STAFF**********************/
 /* Hide full name for non-staff users based on the first possible element */
 body:not(.staff) #main-outlet .details .primary .primary-textual .user-profile-names .full-name,
