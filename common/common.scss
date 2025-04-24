@@ -5,20 +5,6 @@
 }
 /*****************************************************************/
 
-/**********************************Hide Full Names from NON-STAFF**********************/
-/* Hide full name for non-staff users based on the first possible element */
-body:not(.staff) #main-outlet .details .primary .primary-textual .user-profile-names .full-name,
-body:not(.admin) div.name-line a > span.name {
-  display: none!important;
-}
-
-/* Hide full name for non-logged-in (anonymous) users based on the first structure */
-.anonymous #main-outlet .details .primary .primary-textual .user-profile-names .full-name,
-.anonymous span.name, ul.list[aria-label="results user"] span.name, .search-results .name, body:not(.staff).select-kit-collection .user-titles .name {
-  display: none!important;
-}
-/**************************************/
-
 
 /**********************Hide allow PM from profile page (JP)**************************/
 div.control-group.private-messages {
