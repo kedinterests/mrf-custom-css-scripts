@@ -787,7 +787,7 @@ span {
 /*****************************************************************/
 
 /************ ADVERTISER REDIRECTS *****************/
-div.ad-redirect {
+[data-theme-ad-redirect] {
    font-size:2.5rem;
    padding-top: 50%;
    font-weight:600;
