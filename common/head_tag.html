@@ -1,18 +1,2 @@
 <script src="https://cdn.pagesense.io/js/kedinterestsllc/b1e52954ccf047e99647b1d8435b0d4c.js"></script>
 <script>(function(f,n) { n = document.createElement('script'); n.src = 'https://fcdn.answerly.io/fn.js'; n.setAttribute('data-companyId', f); document.getElementsByTagName('html')[0].insertAdjacentElement('beforeend', n); })('8adcea11-b36c-4cbb-9184-b39328483251');</script>
-<!-- Fathom - beautiful, simple website analytics -->
-<script src="https://cdn.usefathom.com/script.js" data-site="BMJVFLSP" defer></script>
-<script>
-window.addEventListener('load', (event) => {
-  document.querySelectorAll('.sponsored').forEach(item => {
-    item.addEventListener('click', event => {
-      let url = new URL(item.getAttribute('href'));
-      let domainParts = url.hostname.split('.');
-      let domainName = domainParts.length > 1 ? domainParts[domainParts.length - 2] : domainParts[0];
- 
-      fathom.trackEvent(`Sponsor clicked: ${domainName}`);
-    });
-  });
-});
-</script>
-<!-- / Fathom -->
