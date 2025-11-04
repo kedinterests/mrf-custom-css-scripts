@@ -98,10 +98,12 @@ tr[data-topic-id='75463'], tr[data-topic-id='82544'] {
 }
 /*******Business Member Post Color*******/
 .group-BusinessMember, .group--BusinessMember a {
-  color: #0A0A0A !important;
-text-weight:bold!important;
-
+  color: #3E7EE7 !important;
 }
+
+.group--BusinessMember p a {
+    color: #0A0A0A !important;
+font-weight:bold!important;
 
 
 /*****************************************************************/
