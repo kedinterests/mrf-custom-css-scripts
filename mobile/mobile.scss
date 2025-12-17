@@ -28,8 +28,19 @@ div.directory-ad-desktop {
     }
 }
 
-.menu-item-container {
-    x-overflow:scroll!important;
+/* Mobile horizontal scrolling for Header Submenus */
+@media (max-width: 768px) {
+  .header-submenus,
+  .header-submenus .menu-panel {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .header-submenus a {
+    display: inline-block;
+  }
 }
 
 // Fix odd width issue for latest topics
