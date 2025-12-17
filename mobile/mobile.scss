@@ -153,113 +153,46 @@ div.category-logo {
 }}
 /*****************************************************************/
 
-/* Fix for Header Submenus mobile horizontal scrolling */
-/* Targets the official Discourse Header Submenus component */
-/* This fixes the issue where horizontal scrolling works in desktop emulator but not on real mobile devices */
+/* Minimal Fix for Header Submenus mobile horizontal scrolling */
+/* This version ONLY adds scrolling capability without affecting layout or colors */
 
 @media screen and (max-width: 767px) {
-  /* Main container - ensure it allows overflow and doesn't constrain */
-  .header-submenus,
-  .above-site-header-outlet.header-submenus {
-    overflow-x: visible !important;
-    overflow-y: visible !important;
-    width: 100% !important;
-    max-width: 100vw !important;
-    position: relative !important;
-  }
-  
-  /* Top menu container - this is the scrollable container */
-  /* Critical: This must have overflow-x: auto and proper touch handling */
+  /* Top menu container - ONLY add scrolling properties, nothing else */
   .top-menu,
   #top-menu {
     overflow-x: auto !important;
     overflow-y: hidden !important;
     -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important; /* Firefox */
-    -ms-overflow-style: none !important; /* IE/Edge */
-    width: 100% !important;
-    max-width: 100vw !important;
-    display: block !important;
-    white-space: nowrap !important;
-    touch-action: pan-x pan-y !important; /* Allow horizontal panning */
-    position: relative !important;
-    /* Ensure content can overflow */
-    min-height: 0 !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    touch-action: pan-x pan-y !important;
   }
   
-  /* Hide scrollbar on mobile (but keep functionality) */
+  /* Hide scrollbar */
   .top-menu::-webkit-scrollbar,
   #top-menu::-webkit-scrollbar {
     display: none !important;
-    width: 0 !important;
-    height: 0 !important;
-    background: transparent !important;
   }
   
-  /* Menu content wrapper - ensure items stay inline and don't wrap */
-  .top-menu .menu-content,
-  .top-menu .menu-content.wrap,
-  #top-menu .menu-content,
-  #top-menu .menu-content.wrap {
-    display: inline-flex !important;
-    flex-wrap: nowrap !important;
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
-    min-width: max-content !important;
-    width: auto !important;
-    /* Ensure content is wider than viewport to trigger scroll */
-    min-width: 100% !important;
-  }
-  
-  /* Individual menu items - prevent wrapping and shrinking */
-  .top-menu .menu-content > *,
-  .top-menu .menu-content.wrap > *,
-  #top-menu .menu-content > *,
-  #top-menu .menu-content.wrap > * {
-    display: inline-block !important;
-    flex-shrink: 0 !important;
-    white-space: nowrap !important;
-    float: none !important;
-  }
-  
-  /* Ensure links and text don't wrap */
-  .top-menu a,
-  .top-menu span,
-  .top-menu div,
-  #top-menu a,
-  #top-menu span,
-  #top-menu div {
-    white-space: nowrap !important;
-    display: inline-block !important;
-  }
-  
-  /* Prevent any flex containers from wrapping */
-  .top-menu [class*="flex"],
-  #top-menu [class*="flex"] {
+  /* Menu content - ONLY prevent wrapping */
+  .top-menu > .menu-content,
+  .top-menu > .menu-content.wrap,
+  #top-menu > .menu-content,
+  #top-menu > .menu-content.wrap {
     flex-wrap: nowrap !important;
   }
   
-  /* Ensure parent containers don't constrain */
-  .above-site-header-outlet {
+  /* Top-level placeholders - prevent shrinking */
+  .top-menu > .menu-content > .menu-placeholder,
+  #top-menu > .menu-content > .menu-placeholder {
+    flex-shrink: 0 !important;
+  }
+  
+  /* Ensure parent allows overflow */
+  .header-submenus {
     overflow-x: visible !important;
     width: 100% !important;
     max-width: 100vw !important;
-  }
-  
-  /* Prevent body from interfering, but allow menu to scroll */
-  body {
-    overflow-x: hidden !important;
-  }
-  
-  /* Additional fix: Ensure the menu content actually overflows */
-  /* This forces the browser to recognize the need for scrolling */
-  .top-menu .menu-content:after,
-  #top-menu .menu-content:after {
-    content: '' !important;
-    display: inline-block !important;
-    width: 1px !important;
-    height: 100% !important;
-    flex-shrink: 0 !important;
   }
 }
 
