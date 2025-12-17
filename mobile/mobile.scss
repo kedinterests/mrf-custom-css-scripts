@@ -158,10 +158,11 @@ div.category-logo {
 
 @media screen and (max-width: 767px) {
   /* Top menu container - ONLY add scrolling properties, nothing else */
+  /* overflow-y must be visible so dropdowns can display */
   .top-menu,
   #top-menu {
     overflow-x: auto !important;
-    overflow-y: hidden !important;
+    overflow-y: visible !important; /* Changed to visible so dropdowns can show */
     -webkit-overflow-scrolling: touch !important;
     scrollbar-width: none !important;
     -ms-overflow-style: none !important;
@@ -193,101 +194,6 @@ div.category-logo {
     overflow-x: visible !important;
     width: 100% !important;
     max-width: 100vw !important;
-  }
-}
-
-/* Fix for Header Submenus mobile horizontal scrolling */
-/* Targets the official Discourse Header Submenus component */
-/* This fixes the issue where horizontal scrolling works in desktop emulator but not on real mobile devices */
-/* IMPORTANT: This only affects horizontal scrolling, preserves all colors, heights, and dropdown functionality */
-
-@media screen and (max-width: 767px) {
-  /* Main container - ensure it allows overflow and doesn't constrain */
-  .header-submenus,
-  .above-site-header-outlet.header-submenus {
-    overflow-x: visible !important;
-    overflow-y: visible !important;
-    width: 100% !important;
-    max-width: 100vw !important;
-  }
-  
-  /* Top menu container - ONLY add scrolling properties */
-  /* Do NOT touch display, height, colors, or any other properties */
-  .top-menu,
-  #top-menu {
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important; /* Firefox */
-    -ms-overflow-style: none !important; /* IE/Edge */
-    width: 100% !important;
-    max-width: 100vw !important;
-    touch-action: pan-x pan-y !important;
-    /* Do NOT set height - let Discourse handle it */
-  }
-  
-  /* Hide scrollbar on mobile (but keep functionality) */
-  .top-menu::-webkit-scrollbar,
-  #top-menu::-webkit-scrollbar {
-    display: none !important;
-    width: 0 !important;
-    height: 0 !important;
-    background: transparent !important;
-  }
-  
-  /* Menu content wrapper - ONLY prevent wrapping, preserve everything else */
-  .top-menu > .menu-content,
-  .top-menu > .menu-content.wrap,
-  #top-menu > .menu-content,
-  #top-menu > .menu-content.wrap {
-    flex-wrap: nowrap !important;
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
-    min-width: max-content !important;
-    width: auto !important;
-  }
-  
-  /* Top-level menu placeholders - ONLY prevent wrapping */
-  .top-menu > .menu-content > .menu-placeholder,
-  #top-menu > .menu-content > .menu-placeholder {
-    flex-shrink: 0 !important;
-    white-space: nowrap !important;
-  }
-  
-  /* Top-level menu items wrapper - prevent wrapping */
-  /* Be very specific to avoid affecting dropdowns */
-  .top-menu > .menu-content > .menu-placeholder > .menu-item-container > .menu-items:not(.d-header-dropdown):not(.d-dropdown-menu),
-  #top-menu > .menu-content > .menu-placeholder > .menu-item-container > .menu-items:not(.d-header-dropdown):not(.d-dropdown-menu) {
-    white-space: nowrap !important;
-  }
-  
-  /* CRITICAL: Ensure dropdowns are NOT affected - they should wrap normally */
-  /* Override any accidental inheritance from parent selectors */
-  .top-menu .d-header-dropdown,
-  .top-menu .d-dropdown-menu,
-  .top-menu .submenu-item,
-  .top-menu .submenu-link,
-  .top-menu .d-header-dropdown *,
-  .top-menu .d-dropdown-menu *,
-  #top-menu .d-header-dropdown,
-  #top-menu .d-dropdown-menu,
-  #top-menu .submenu-item,
-  #top-menu .submenu-link,
-  #top-menu .d-header-dropdown *,
-  #top-menu .d-dropdown-menu * {
-    white-space: normal !important;
-  }
-  
-  /* Ensure parent containers don't constrain */
-  .above-site-header-outlet {
-    overflow-x: visible !important;
-    width: 100% !important;
-    max-width: 100vw !important;
-  }
-  
-  /* Prevent body from interfering, but allow menu to scroll */
-  body {
-    overflow-x: hidden !important;
   }
 }
 
