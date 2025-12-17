@@ -28,20 +28,7 @@ div.directory-ad-desktop {
     }
 }
 
-/* Mobile horizontal scrolling for Header Submenus */
-@media (max-width: 768px) {
-  .header-submenus,
-  .header-submenus .menu-panel {
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
 
-  .header-submenus a {
-    display: inline-block;
-  }
-}
 
 // Fix odd width issue for latest topics
 div#list-area table.topic-list tr.topic-list-item td {
@@ -165,3 +152,41 @@ div.category-logo {
         border:none!important;
 }}
 /*****************************************************************/
+
+/* Fix for Header Submenus mobile horizontal scrolling */
+/* This targets the official Discourse Header Submenus component */
+
+@media screen and (max-width: 767px) {
+  /* Main navigation menu container */
+  .nav-menu {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    white-space: nowrap !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    touch-action: pan-x !important;
+  }
+  
+  /* Hide scrollbar on mobile */
+  .nav-menu::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+  /* Ensure menu items stay inline */
+  .nav-menu ul {
+    display: inline-flex !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+  }
+  
+  .nav-menu li {
+    display: inline-block !important;
+    flex-shrink: 0 !important;
+  }
+  
+  /* Prevent wrapping of menu item text */
+  .nav-menu a {
+    white-space: nowrap !important;
+  }
+}
