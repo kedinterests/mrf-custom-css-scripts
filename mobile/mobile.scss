@@ -28,6 +28,10 @@ div.directory-ad-desktop {
     }
 }
 
+.menu-item-container {
+    x-overflow:scroll!important;
+}
+
 // Fix odd width issue for latest topics
 div#list-area table.topic-list tr.topic-list-item td {
     width: 100%; 
