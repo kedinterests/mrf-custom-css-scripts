@@ -800,3 +800,12 @@ span {
 .category-heading {
   border:none!important;
 }
+
+/*************** In House Ad Links ******************/
+.in-house-ad-link {
+  color: black;
+}
+.in-house-ad-link:hover {
+  color:inherit;
+  text-decoration:underline;
+}
