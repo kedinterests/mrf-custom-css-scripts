@@ -153,20 +153,25 @@ div.category-logo {
 }}
 
 /**************** Fix Horizontal Scroll for iPhone ****************/
-/* Target the black navigation container at the top */
-.custom-header-links, 
-.nav-pills {
+
+/* 1. The container must be flex and allow horizontal overflow */
+.header-submenus .menu-items {
   display: flex !important;
   overflow-x: auto !important;
-  -webkit-overflow-scrolling: touch !important; /* Forces momentum scrolling on iOS */
-  flex-wrap: nowrap !important;
-  padding-bottom: 5px; /* Adds small buffer for the scroll action */
+  overflow-y: hidden !important;
+  flex-wrap: nowrap !important; /* Prevents items from jumping to a second line */
+  -webkit-overflow-scrolling: touch !important; /* Critical for smooth iPhone scrolling */
+  width: 100% !important;
 }
 
-/* Ensure individual menu items do not shrink to fit the screen */
-.custom-header-links li,
-.nav-pills li {
-  flex: 0 0 auto !important;
-  white-space: nowrap !important;
+/* 2. The items must not shrink, otherwise they will squeeze to fit the screen */
+.header-submenus .menu-item {
+  flex: 0 0 auto !important; 
+  white-space: nowrap !important; /* Keeps text on one line */
+  display: inline-flex !important;
 }
-/*****************************************************************/
+
+/* 3. Hide the scrollbar for a cleaner look (optional) */
+.header-submenus .menu-items::-webkit-scrollbar {
+  display: none;
+}
