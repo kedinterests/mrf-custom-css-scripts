@@ -151,4 +151,22 @@ div.category-logo {
         padding-bottom:0px!important;
         border:none!important;
 }}
+
+/**************** Fix Horizontal Scroll for iPhone ****************/
+/* Target the black navigation container at the top */
+.custom-header-links, 
+.nav-pills {
+  display: flex !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important; /* Forces momentum scrolling on iOS */
+  flex-wrap: nowrap !important;
+  padding-bottom: 5px; /* Adds small buffer for the scroll action */
+}
+
+/* Ensure individual menu items do not shrink to fit the screen */
+.custom-header-links li,
+.nav-pills li {
+  flex: 0 0 auto !important;
+  white-space: nowrap !important;
+}
 /*****************************************************************/
